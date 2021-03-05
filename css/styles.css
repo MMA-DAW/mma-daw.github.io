@@ -1,0 +1,182 @@
+
+:root{
+    --Color-bg-header: #000000;
+    --Color-bg-body: #f7f449; /*VERDE CLARO*/
+    --Color-title: #e62f2f; /*ROJO*/
+    --Color-text: #0f0e0e; /*NEGRO*/
+
+    --color-degra: ;
+
+    --bg-body: url('../img/fondo-linea.png');
+
+}
+
+/*RESTABLECIMIENTO DE CSS*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--Color-bg-body);
+    background-image: var(--bg-body);
+    color: var(--Color-text);
+    width: 100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+header{
+    background: var(--Color-bg-header);
+    width: 100%;
+    margin: 0 auto;
+}
+    
+    
+    #logo-nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;;
+
+    }
+        .logo{
+            display: flex;
+            width: 28%;
+            padding: 1%;
+        }
+
+            .logo img{
+                margin: 0%;
+            }
+
+            .name{
+                margin-left: 3%;
+                display:flex;
+                flex-direction: column;
+                align-content: flex-start;
+                justify-content: center;
+                font-size: 2.5vw;
+                color:#f7f449;
+            }
+
+        nav{
+            border-bottom: 1px solid white;
+            width: 70%;
+        }
+            
+        .primary{
+            display:flex;
+            flex: row;
+            flex-wrap: wrap;
+            
+        }
+
+            .primary > li {
+                position:relative;
+                padding: 1%;
+                margin: 2% 2% 2% 2%;
+                
+            }
+
+                .primary > li:hover{
+                    background-color: var(--Color-text);
+
+                }
+
+                .primary > li:hover > .secondary{
+                    visibility: visible;
+                    display: flex;
+                    opacity: 100%;
+                }
+
+                    .primary li a{
+                        font-size: 1.7vw;
+                        color: var(--Color-bg-body);
+                    }
+
+                        .primary > li::first-letter{
+                            font-size: 2vw;
+                            color: var(--Color-title);
+                        }
+
+                    .secondary{
+                        position: absolute;
+                        visibility: hidden;
+                        display: none;
+                        flex-direction: column;
+                        opacity: 0%;
+                        justify-content: flex-start;
+                        margin: 10%;
+                        z-index: 4;
+
+                    }
+
+                        .secondary li{
+                            background-color: var(--Color-bg-header);
+                            width: 220%;           
+                            padding: 10%;
+
+                        }
+                    
+
+main{
+    width: 100%;
+}
+
+#news {
+    background: var(--Color-bg-body);
+    width: 60%;
+    height: auto;
+    margin: 1% auto;
+    position: relative;  
+    display: flex;
+    justify-content: center;
+  }
+  
+  #news .new {
+    position: absolute;
+    width: 43%;
+    top: 0;
+    left: auto;
+    opacity: 0;
+
+  }
+  
+  #news input[type=radio] {
+    position: relative;
+    bottom: calc(-10px - 1.5em);
+    margin: 1%;
+  }
+  
+  #news input[type=radio]:nth-of-type(1):checked ~ .new:nth-of-type(1) {
+    opacity: 1;
+  }
+  
+  #news input[type=radio]:nth-of-type(2):checked ~ .new:nth-of-type(2) {
+    opacity: 1;
+  }
+  
+  #news input[type=radio]:nth-of-type(3):checked ~ .new:nth-of-type(3) {
+    opacity: 1;
+  }
+
+
+footer{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 4%;
+    background: var(--Color-bg-header);
+    width: 100%;
+    color: white;
+}
