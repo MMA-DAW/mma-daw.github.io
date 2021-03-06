@@ -1,0 +1,37 @@
+
+:root{
+
+}
+
+fieldset{
+    background: tomato;
+    margin: 5% auto;
+    width: 70%;
+}
+
+form{
+    margin: 2%;  
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-control{
+        margin: 1%;
+        
+    }
+
+/* ERROR */
+
+.error{
+    border: 1px solid red;
+
+}
+@media (max-width: 768px) {
+
+    fieldset{
+        width: 90%;
+    }
+
+
+
+}

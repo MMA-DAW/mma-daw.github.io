@@ -1,0 +1,104 @@
+:root{
+    --Color-bg-header: #000000;
+    --Color-bg-body: #f7f449; /*VERDE CLARO*/
+    --Color-title: #e62f2f; /*ROJO*/
+    --Color-text: #0f0e0e; /*NEGRO*/
+
+    --bg-body: url('../img/fondo.png');
+    --back: url('../img/fondo-01.png');
+}
+
+
+#memorama{
+    width: 60%;
+    margin: 0 auto;
+    opacity: 95%;
+}
+
+h1{ 
+    font-size: 4vw; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    color: var(--Color-title);
+    text-align:center;   
+    text-shadow: 0.2em 0.5em 0.1em #e1dfb6,
+	  -0.3em 0.1em 0.1em #29ab78,
+	  0.4em -0.3em 0.1em #6a80df
+}
+
+h2{ 
+    font-size: 2vw; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align:center;   
+    text-shadow: 0.1em 0.1em 0.05em #333
+}
+
+h3{ 
+    font-size: 1.5vw; 
+    color: var(--Color-bg-01); 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center; 
+}
+
+#result{
+    margin: auto;
+    justify-content: center;
+    text-align:center; 
+
+}
+
+#option{
+    justify-content: center;
+}
+
+#option li{
+    margin: 1% auto;
+    display: inline-block;
+    padding: 0% 2% 0% 2%;
+}
+
+#box-game{
+    margin: 1% auto;
+    padding: 4% 0% 4% 13%;
+    justify-content: center;
+}
+
+.card{
+    background: var(--back); 
+    margin: 0 auto;
+    display: inline-flex;
+    width: 20%;
+    padding: 0%; 
+    opacity: 70%;
+    height: 99px;
+    border: 2px outset var(--Color-bg-01);  
+}
+
+.card img{
+    margin: 0 auto;
+    width: 99%;
+}
+
+.card:hover{
+    opacity: 200%;
+}
+
+.card-select{
+    background: white !important;
+    position: relative;
+    width: 20%;
+    padding: 0%; 
+    opacity: 100%;
+    border: 2px outset var(--Color-secundario-01);  
+}
+
+footer{
+    margin: 0% auto;
+    padding: 1%;
+    height: auto;
+    justify-content: center;
+    text-align:center; 
+    color: white;
+    background-color: black;
+}

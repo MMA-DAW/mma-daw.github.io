@@ -1,4 +1,8 @@
 
+@font-face {
+    font-family: "Stalinist One";
+    src: url("font/StalinistOne-Regular.ttf");
+  }
 :root{
     --Color-bg-header: #000000;
     --Color-bg-body: #f7f449; /*VERDE CLARO*/
@@ -8,6 +12,9 @@
     --color-degra: ;
 
     --bg-body: url('../img/fondo-linea.png');
+    --b-h: url('../img/b-h.png');
+
+    --new-01: url('../img/news/new-memorama.png');
 
 }
 
@@ -18,25 +25,50 @@
     box-sizing: border-box;
 }
 
+h2{
+    font-size: 4vw;
+    color: var(--Color-bg-body);
+    font-family: "Stalinist One";
+    margin: 0;
+}
+h3{
+    font-size: 3vw;
+    color: red;
+    text-align: right;
+    margin: 0;
+}
+
 body{
     background: var(--Color-bg-body);
     background-image: var(--bg-body);
     color: var(--Color-text);
     width: 100%;
+    margin: 0 auto;
 }
 
 a{
     text-decoration:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
 }
 
 ul{
     list-style:none;
 }
 
+section{
+    margin: 0 auto;
+    padding: 0:auto;
+}
+
 header{
     background: var(--Color-bg-header);
     width: 100%;
     margin: 0 auto;
+    border-bottom: 1px solid white;
 }
     
     
@@ -50,7 +82,7 @@ header{
     }
         .logo{
             display: flex;
-            width: 28%;
+            width: 30%;
             padding: 1%;
         }
 
@@ -59,7 +91,8 @@ header{
             }
 
             .name{
-                margin-left: 3%;
+                margin-left: 2%;
+                padding: 1%;
                 display:flex;
                 flex-direction: column;
                 align-content: flex-start;
@@ -68,15 +101,20 @@ header{
                 color:#f7f449;
             }
 
+        #b-h{
+            display: none;
+        }
+
         nav{
-            border-bottom: 1px solid white;
             width: 70%;
+
         }
             
         .primary{
             display:flex;
-            flex: row;
-            flex-wrap: wrap;
+            justify-content: flex-end;
+            padding-right: 5%;
+
             
         }
 
@@ -130,46 +168,46 @@ header{
 
 main{
     width: 100%;
+    min-height: 100hv;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #news {
-    background: var(--Color-bg-body);
-    width: 60%;
-    height: auto;
-    margin: 1% auto;
-    position: relative;  
+    background-image: var(--new-01);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 540px;
+    padding: 2%;
+    margin: 0% auto; 
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-content: center;
+    flex-direction: column;
   }
-  
-  #news .new {
-    position: absolute;
-    width: 43%;
-    top: 0;
-    left: auto;
-    opacity: 0;
+
+  .inline{
+      display: flex;
+      flex-direction: row;
+  }
+
+  input{
+      margin: 5%;
+  }
+
+  .desc{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: space-between;
+      text-align: right;
+      margin: 3%;
 
   }
   
-  #news input[type=radio] {
-    position: relative;
-    bottom: calc(-10px - 1.5em);
-    margin: 1%;
-  }
-  
-  #news input[type=radio]:nth-of-type(1):checked ~ .new:nth-of-type(1) {
-    opacity: 1;
-  }
-  
-  #news input[type=radio]:nth-of-type(2):checked ~ .new:nth-of-type(2) {
-    opacity: 1;
-  }
-  
-  #news input[type=radio]:nth-of-type(3):checked ~ .new:nth-of-type(3) {
-    opacity: 1;
-  }
-
-
 footer{
     margin: 0 auto;
     display: flex;
@@ -179,4 +217,32 @@ footer{
     background: var(--Color-bg-header);
     width: 100%;
     color: white;
+}
+
+@media (max-width: 768px) {
+
+    nav{
+        display: none;
+    }
+
+    #b-h{
+        display: flex;
+        background-color: #f7f449;
+        background-image: var(--b-h);
+        width: 45px;
+        height: 45px;
+        margin: 1%;
+        opacity: 70%;
+    }
+    
+    #b-h:hover{
+        opacity: 100%;
+        cursor: pointer;
+    }
+
+    #b-h:checked + nav{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }

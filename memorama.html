@@ -4,11 +4,16 @@
     <meta charset="utf-8">
     <!-- LLAMA AL ARCHIVO DE ESTILOS -->
 		<link href="css/styles.css" rel="stylesheet" type="text/css">	
+        <link href="css/Styles-memorama.css" rel="stylesheet" type="text/css">	
+        <!-- LLAMA AL ARCHIVO DE JAVASCRIPT -->
+        <script type="text/javascript" src="js/memorama.js" async></script>
 		<!-- TÍTULO WEBSITE -->   
     <title>Site web-flex</title>
+
 </head>
 
 <body>
+    <noscript>Por favor, active Javascript</noscript>
   
   <header>
        
@@ -17,7 +22,6 @@
             <a href="index.html"><img src="img/logo-pequeno.png" width="50px"></a><div class="name">Web-flex</div>
         </div>
 
-        <button id="b-h"></button>
         <nav>
             <ul class="primary" >
                 
@@ -44,11 +48,11 @@
                 </ul>
               </li>
 
-              <li><a href="">Formularios</a>
+              <li><a href="formulario.html">Formularios</a>
                   
                 <ul class="secondary">
 
-                  <li><a href="formulario.html">Escríbenos [html]</a>
+                  <li><a href="">Escríbenos [html]</a>
                   
                   <li><a href="">Escríbenos [JavaScript]</a></li>
 
@@ -73,36 +77,41 @@
   </header>
 
   <main>
-        <section class="seccion-index" id="news">  
-            <div class="inline">
-              <input type="radio" name="new-news"  checked>
-              <input type="radio" name="new-news" >
-              <input type="radio" name="new-news" > 
-            </div> 
-            <div class="desc">
-              <h2>MEMORAMA</h2>
-              <h3>¡JUEGA YA!</h3>
-            </div>
+
+        <section class="seccion-index"  id="memorama">
+
+                <section id="result">
             
+                    <ul id="option">
+                        <li id="hit"></li>
+                        <li id="opportunities"></li>
+                        <li><input type="button" id="button" value="COMENZAR"></li>
+                    </ul>
+        
+                    <h2 id="game-result">hol</h2>
+                    
+                </section>
+        
+                <section id="box-game">
+        
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+        
+                </section>
+
         </section>
 
-          
-        </section>
-
-        <section class="seccion-index"  id="ciencia">
-          <h2 class="title-section">Ciencia</div>
-
-        </section>
-
-        <section class="seccion-index" id="juegos">
-          <div class="title-section">Videojuegos</div>
-
-        </section>
-
-        <section class="seccion-index" id="formulario">
-          <div class="title-section">Formularios</div>
-          
-        </section>
+        
 
   </main>
 
