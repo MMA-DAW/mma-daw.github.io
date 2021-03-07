@@ -1,8 +1,8 @@
-
 @font-face {
     font-family: "Stalinist One";
     src: url("font/StalinistOne-Regular.ttf");
-  }
+}
+
 :root{
     --Color-bg-header: #000000;
     --Color-bg-body: #f7f449; /*VERDE CLARO*/
@@ -14,45 +14,47 @@
     --bg-body: url('../img/fondo-linea.png');
     --b-h: url('../img/b-h.png');
 
-    --new-01: url('../img/news/new-memorama.png');
 
 }
 
 /*RESTABLECIMIENTO DE CSS*/
 *{
-    margin: 0 auto;
-    padding: 0;
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0; 
 }
 
 h2{
-    font-size: 4vw;
     color: var(--Color-bg-body);
     font-family: "Stalinist One";
+    font-size: 4vw;    
     margin: 0;
 }
+
 h3{
-    font-size: 3vw;
     color: red;
-    text-align: right;
+    font-size: 3vw; 
     margin: 0;
+    text-align: right;
 }
 
 body{
     background: var(--Color-bg-body);
     background-image: var(--bg-body);
     color: var(--Color-text);
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
+    
 }
 
 a{
-    text-decoration:none;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    text-decoration:none;  
 }
 
 ul{
@@ -61,188 +63,228 @@ ul{
 
 section{
     margin: 0 auto;
-    padding: 0:auto;
+    padding: 0 auto;
 }
+
+
+/* SELECTORES DE LA CABECERA */
 
 header{
     background: var(--Color-bg-header);
-    width: 100%;
-    margin: 0 auto;
     border-bottom: 1px solid white;
+    margin: 0 auto;
+    width: 100%;
 }
     
     
-    #logo-nav{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        justify-content: center;;
+#logo-nav{
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;;
+    width: 100%;
+}
+        
+.logo{
+    display: flex;
+    padding: 1%;
+    width: 30%;
+}
 
-    }
-        .logo{
-            display: flex;
-            width: 30%;
-            padding: 1%;
-        }
+.logo img{
+    margin: 0%;
+}
 
-            .logo img{
-                margin: 0%;
-            }
+.name{
+    align-content: flex-start;
+    color:#f7f449;
+    display:flex;
+    flex-direction: column;
+    font-size: 2.5vw;
+    justify-content: center;
+    margin-left: 2%;
+    padding: 1%;
+              
+}
 
-            .name{
-                margin-left: 2%;
-                padding: 1%;
-                display:flex;
-                flex-direction: column;
-                align-content: flex-start;
-                justify-content: center;
-                font-size: 2.5vw;
-                color:#f7f449;
-            }
+#b-h{
+    display: none;
+}
 
-        #b-h{
-            display: none;
-        }
-
-        nav{
-            width: 70%;
-
-        }
+/* ESTILOS ZONA NAVEGACIÓN */
+ nav{
+    width: 70%;
+}
             
-        .primary{
-            display:flex;
-            justify-content: flex-end;
-            padding-right: 5%;
+.primary{
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 5%;          
+}
 
-            
-        }
+.primary > li {
+    margin: 2% 2% 2% 2%;
+    position:relative;
+    padding: 1%;  
+}
 
-            .primary > li {
-                position:relative;
-                padding: 1%;
-                margin: 2% 2% 2% 2%;
-                
-            }
+.primary > li:hover{
+    background-color: var(--Color-text);
 
-                .primary > li:hover{
-                    background-color: var(--Color-text);
+}
 
-                }
+/*.primary > li:hover > .secondary{
+    display: flex;
+    opacity: 100%;
+    visibility: visible;
+ }*/
 
-                .primary > li:hover > .secondary{
-                    visibility: visible;
-                    display: flex;
-                    opacity: 100%;
-                }
+.primary li a{
+    color: var(--Color-bg-body);                    
+    font-size: 1.7vw;                      
+ }
 
-                    .primary li a{
-                        font-size: 1.7vw;
-                        color: var(--Color-bg-body);
-                    }
+.primary > li::first-letter{
+    color: var(--Color-title);                        
+    font-size: 2vw;                         
+}
 
-                        .primary > li::first-letter{
-                            font-size: 2vw;
-                            color: var(--Color-title);
-                        }
+/*.secondary{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10%;
+    position: absolute;                  
+    z-index: 4;
+}
 
-                    .secondary{
-                        position: absolute;
-                        visibility: hidden;
-                        display: none;
-                        flex-direction: column;
-                        opacity: 0%;
-                        justify-content: flex-start;
-                        margin: 10%;
-                        z-index: 4;
-
-                    }
-
-                        .secondary li{
-                            background-color: var(--Color-bg-header);
-                            width: 220%;           
-                            padding: 10%;
-
-                        }
+.secondary li{
+    background-color: var(--Color-bg-header);
+    padding: 10%;                        
+    width: 220%;           
+ }*/
                     
+/* ESTILOS DE LA ZONA PRINCIPAL*/
 
 main{
-    width: 100%;
-    min-height: 100hv;
     margin: 0 auto;
+    min-height: 450px;
     padding: 0;
+    width: 100%;
+}
+
+
+.title-section{
+    font-size: 2vw;
 }
 
 #news {
-    background-image: var(--new-01);
+    align-content: center;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 540px;
-    padding: 2%;
-    margin: 0% auto; 
     display: flex;
-    justify-content: start;
-    align-content: center;
     flex-direction: column;
-  }
-
-  .inline{
-      display: flex;
-      flex-direction: row;
-  }
-
-  input{
-      margin: 5%;
-  }
-
-  .desc{
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-content: space-between;
-      text-align: right;
-      margin: 3%;
-
-  }
-  
-footer{
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 4%;
-    background: var(--Color-bg-header);
+    height: 540px;
+    justify-content: start;
+    margin: 0% auto;
+    padding: 2%;
     width: 100%;
-    color: white;
 }
 
-@media (max-width: 768px) {
+.inline{
+    display: flex;
+    flex-direction: row;
+}
 
-    nav{
+input{
+    margin: 5%;
+}
+
+#desc{
+    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3%;  
+    text-align: right;
+    width: 95%;
+}
+  
+footer{
+    align-content: center;
+    background: var(--Color-bg-header);
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 4%;
+    width: 100%;  
+}
+
+@media only screen and (max-width: 820px) {
+
+    :root{
+        --new-01: url('../img/news/new-memorama-small.png');
+    }
+
+    #navegacion{
         display: none;
+        position: relative;
+        width: 15%;
+        font-size: ;
+    }
+
+    .primary{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        position: absolute;
+    }
+
+    .primary li a{                
+        font-size: 3.5vw;                      
+    }
+     
+     .secondary{
+        left: 5%;                   
     }
 
     #b-h{
-        display: flex;
         background-color: #f7f449;
         background-image: var(--b-h);
-        width: 45px;
+        display: flex;
         height: 45px;
         margin: 1%;
         opacity: 70%;
+        width: 45px;
+
     }
     
     #b-h:hover{
-        opacity: 100%;
         cursor: pointer;
+        opacity: 100%;
     }
 
-    #b-h:checked + nav{
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    #submenu:target .secondary{
+        display: flex;
+  
     }
+
+    main{
+        min-height: 900px;
+    }
+
+    #news {
+        align-content: center;
+        background-position: noner;
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        justify-content: flex-end;
+        margin: 0% auto;
+        padding: 2%;
+      }
 }

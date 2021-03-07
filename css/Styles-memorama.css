@@ -4,7 +4,6 @@
     --Color-title: #e62f2f; /*ROJO*/
     --Color-text: #0f0e0e; /*NEGRO*/
 
-    --bg-body: url('../img/fondo.png');
     --back: url('../img/fondo-01.png');
 }
 
@@ -59,6 +58,7 @@ h3{
 }
 
 #box-game{
+    background-color: var(--Color-bg-body);
     margin: 1% auto;
     padding: 4% 0% 4% 13%;
     justify-content: center;
@@ -93,12 +93,7 @@ h3{
     border: 2px outset var(--Color-secundario-01);  
 }
 
-footer{
-    margin: 0% auto;
-    padding: 1%;
-    height: auto;
-    justify-content: center;
-    text-align:center; 
-    color: white;
-    background-color: black;
+@media only screen and (max-width: 820px) {
+
+
 }
