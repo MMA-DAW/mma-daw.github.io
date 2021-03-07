@@ -79,6 +79,7 @@ header{
     
     
 #logo-nav{
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -253,6 +254,7 @@ footer{
         flex-wrap: wrap;
         justify-content: flex-end;
         position: absolute;
+        z-index: 4;
     }
 
     .primary li a{                
