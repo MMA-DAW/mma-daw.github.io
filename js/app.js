@@ -1,31 +1,39 @@
-
+var menu_button = document.getElementById("b-h");
 window.addEventListener("load", start); //evento load
 
 function start(){
-    var menu_button = document.getElementById("b-h");
-    
+
     menu_button.addEventListener("click", menu);
 
     console.log("buton actualizado");
     
 }
 
-//FUNCTION toTurn(): gira las cartas que están ocultas
+//FUNCIÓN toTurn(): gira las cartas que están ocultas
 function menu(){
+
     
+
     var nav = document.getElementById("navegacion");
 
-    console.log(nav);
+    if(nav.style.display== "none"){
+        nav.style.display= "flex";
+    }else{
+        nav.style.display= "none";
+    }
 
-    nav.style.display= "flex";
  
 }
 
-function menuInterno(){
-    var nav = document.getElementsByClassName("segundary");
+//función closeMenu(): oculta el menú
+function closeMenu(){
+    nav.style.display= "none";
+}
 
-    console.log(nav);
+//FUNCIÓN addEventClose(): añade evento para cerra menú
+function addEventClose(){
 
-    nav.style.display= "flex";
+    menu_button.removeEventListener("click");
 
+    menu_button.addEventListener("click", closeMenu);
 }

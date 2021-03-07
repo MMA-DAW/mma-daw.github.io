@@ -1,4 +1,4 @@
-var rutas = [["img/news/new-memorama.png", "img/news/new-memorama-small.png"], ["img/news/new-web.png", "img/news/new-web.png"]];
+var rutas = [["img/news/new-memorama.png", "img/news/new-memorama-small.png"], ["img/news/new-web.png", "img/news/new-web-small.png"]];
 var novedades_section = document.getElementById("news");
 var descripcion_div = document.getElementById("desc");
 var count = -1;

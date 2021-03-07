@@ -72,22 +72,26 @@ section{
 header{
     background: var(--Color-bg-header);
     border-bottom: 1px solid white;
+    position: fixed;
     margin: 0 auto;
     width: 100%;
+    padding: 1%;
 }
     
     
 #logo-nav{
-    align-content: center;
+
     display: flex;
     flex-direction: row;
-    justify-content: center;;
+    justify-content: flex-end;
     width: 100%;
 }
         
 .logo{
     display: flex;
-    padding: 1%;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0%;
     width: 30%;
 }
 
@@ -169,7 +173,7 @@ header{
 main{
     margin: 0 auto;
     min-height: 450px;
-    padding: 0;
+    padding: 2%;
     width: 100%;
 }
 
@@ -228,11 +232,15 @@ footer{
         --new-01: url('../img/news/new-memorama-small.png');
     }
 
+    .logo{
+        width: 35%;
+    }
+
     #navegacion{
         display: none;
         position: relative;
+        right: 25px;
         width: 15%;
-        font-size: ;
     }
 
     .primary{
@@ -245,7 +253,7 @@ footer{
     }
 
     .primary li a{                
-        font-size: 3.5vw;                      
+        font-size: 4.5vw;                      
     }
      
      .secondary{
@@ -274,7 +282,7 @@ footer{
     }
 
     main{
-        min-height: 900px;
+        min-height: 800px;
     }
 
     #news {

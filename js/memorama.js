@@ -30,7 +30,7 @@ function start(){
 
 //FUNCTION toTurn(): gira las cartas que están ocultas
 function toTurn(){
-    result_div.innerHTML = " ";
+    result_div.innerHTML = "-";
 
     selectCard(this);
 
